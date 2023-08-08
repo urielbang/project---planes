@@ -71,7 +71,7 @@ body {
 }
 .bi {
   font-size: 55px;
-  color: rgb(114, 200, 250);
+  color: rgb(0, 0, 0);
   transition: font-size 2s, text-shadow 2s;
 }
 .bi:hover {
@@ -112,6 +112,9 @@ body {
   justify-content: space-around;
   align-items: center;
 }
+.main div:hover {
+  animation: changingToElipse 10s ease;
+}
 .main img {
   width: 80%;
 
@@ -122,16 +125,38 @@ body {
 }
 .flower1:hover {
   filter: blur(4px);
+  animation: changingToElipse 10s ease;
 }
 .flower2:hover {
   filter: drop-shadow(30px 10px 4px black);
+  animation: changingToElipse 10s ease;
 }
 .flower3:hover {
   filter: grayscale(60%);
+  animation: changingToElipse 10s ease;
 }
 .flower4:hover {
   filter: contrast(1.75);
+  animation: changingToElipse 10s ease;
 }
 .flower5:hover {
   filter: sepia(1);
+  animation: changingToElipse 10s ease;
+}
+@keyframes changingToElipse {
+  0% {
+    border-radius: 0%;
+  }
+  30% {
+    border-radius: 30%;
+  }
+  50% {
+    border-radius: 50%;
+  }
+  70% {
+    border-radius: 70%;
+  }
+  100% {
+    border-radius: 200%;
+  }
 }
