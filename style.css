@@ -2,20 +2,136 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-.container {
+.contain {
   display: grid;
   width: 100vw;
   height: 100vh;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 10% 20% 30% 30% 10%;
+  grid-template-areas:
+    "header header header header header"
+    "sidebar main main main main"
+    "sidebar main main main main"
+    "sidebar main main main main"
+    "footer footer footer footer footer";
 }
 .header {
-  background-color: brown;
+  background-color: blue;
+  grid-area: header;
 }
 .sidebar {
-  background-color: tomato;
+  background-color: rgb(114, 200, 250);
+  grid-area: sidebar;
+  display: flex;
+  justify-content: space-between;
 }
 .main {
-  background-color: violet;
+  grid-area: main;
+  display: flex;
+  gap: 4%;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
 }
 .footer {
-  background-color: teal;
+  background-color: blue;
+  grid-area: footer;
+}
+.header:hover,
+.footer:hover {
+  background-color: rgba(0, 0, 255, 0.728);
+}
+.pages {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.pages a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 35px;
+  transition: font-size 2s, text-shadow 2s;
+}
+.pages a:hover {
+  opacity: 50%;
+  font-size: 40px;
+  text-shadow: 2px 2px 5px white;
+}
+.headerPages {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+.bi {
+  font-size: 55px;
+  color: rgb(114, 200, 250);
+  transition: font-size 2s, text-shadow 2s;
+}
+.bi:hover {
+  font-size: 65px;
+  text-shadow: 2px 2px 5px white;
+}
+.sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 30px;
+  justify-content: space-between;
+}
+@media screen and (max-width: 600px) {
+  .contain {
+    grid-template-areas:
+      "header header header header header"
+      "main main main main main"
+      "main main main main main"
+      "main main main main main"
+      "footer footer footer footer footer";
+  }
+  .main {
+    gap: 4%;
+
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+}
+.main div {
+  width: 26vw;
+  height: 20vh;
+  background-color: gainsboro;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.main img {
+  width: 80%;
+
+  height: 70%;
+}
+.main span {
+  font-weight: bold;
+}
+.flower1:hover {
+  filter: blur(4px);
+}
+.flower2:hover {
+  filter: drop-shadow(30px 10px 4px black);
+}
+.flower3:hover {
+  filter: grayscale(60%);
+}
+.flower4:hover {
+  filter: contrast(1.75);
+}
+.flower5:hover {
+  filter: sepia(1);
 }
