@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+}
+.header {
+  background-color: brown;
+}
+.sidebar {
+  background-color: tomato;
+}
+.main {
+  background-color: violet;
+}
+.footer {
+  background-color: teal;
+}
